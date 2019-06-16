@@ -17,3 +17,7 @@ $ rails server
 
 ```
 
+## Tools Used
+- `rubymine` for IDE
+- `postman` for REST client
+- [Ruby Toolbox](https://www.ruby-toolbox.com/), a site that compares libraries created in Ruby.
