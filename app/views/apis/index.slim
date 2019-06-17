@@ -14,10 +14,10 @@
             - @exchange_rate_json['data'].each do |exchange_rate|
               .col-lg-4.col-md-4.col-12
                 .card.mb-4.shadow-sm
-                  .mx-auto-col-12.text-center
-                    span.flag-icon.flag-icon-my.flag-bnm-wrapper.mt-5
+                  .mx-auto-col-12.text-center.mt-5
+                    span.flag-icon.flag-bnm-wrapper class="#{check_and_assign_flag(exchange_rate['currency_code'].downcase)}"
                   .card-body
-                    h5.card-title = exchange_rate['currency_code']
+                    h5.card-title = "#{check_and_assign_country_name(exchange_rate['currency_code'].downcase)}"
                     h6.card-subtitle.mb-2.text-muted = exchange_rate['currency_code']
                     ul
                       li
@@ -45,7 +45,7 @@
                         - if consumer_alert['websites'][0].nil?
                           | Website: N/A
                         - else
-                          = link_to 'Website', "#{consumer_alert['websites'][0]}", target: '_blank'
+                          = link_to 'Website', "#{check_and_prepend_http(consumer_alert['websites'][0])}", target: '_blank'
                     p.card-text
                       small.pr-1
                         | Entry added:
