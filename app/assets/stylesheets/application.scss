@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+@import "font-awesome";
+@import "flag-icon";
+
+// Branding
+.branding {
+  font-size: 2em;
+  color: white;
+  padding-right:0.5em;
+}
+
+// Navbar
+.navbar-dark .navbar-brand:hover {
+  text-shadow: 1px 1px 18px rgba(255,255,255,1);
+}
+
+// Flag
+.flag-bnm-wrapper {
+  min-height: 11rem;
+  min-width: 15rem;
+}
+
+// Tab
+.fade {
+  transition: opacity .5ms linear;
+}
